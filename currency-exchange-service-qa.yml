@@ -8,6 +8,16 @@ spring:
       enabled: true
 server:
   port: 7000
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - bus-refresh
+          - health
+  security:
+    enabled: false
 eureka:
   client:
     service-url:

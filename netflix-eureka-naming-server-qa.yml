@@ -1,3 +1,5 @@
+server:
+  port: 8761
 management:
   endpoints:
     web:
@@ -10,8 +12,5 @@ management:
     enabled: false
 eureka:
   client:
-    service-url:
-      default-zone: http://localhost:8761/eureka
-limits-service:
-  minimum: 2
-  maximum: 222
+    register-with-eureka: false
+    fetch-registry: false
