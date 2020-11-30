@@ -6,8 +6,8 @@ spring:
   h2:
     console:
       enabled: true
-server:
-  port: 7000
+#server:
+#  port: 7000
 management:
   endpoints:
     web:
