@@ -4,3 +4,36 @@ eureka:
   client:
     service-url:
       default-zone: http://localhost:8761/eureka
+# Disable Timeout for all services
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled: false
+
+# Disable Timeout for each service
+#hystrix:
+#  command:
+#    <service-name>:
+#      execution:
+#        timeout:
+#          enabled: false
+
+# Zuul Hystrix Global Timeout Value For All Services
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+# Zuul Hystrix Global Timeout Value For All Services
+#hystrix:
+#  command:
+#    <service-name>:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
